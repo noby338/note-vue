@@ -14,11 +14,17 @@ import axios from 'axios';
 //关闭 vue 的生产提示
 Vue.config.productionTip = false
 
+//设置axios请求接口地址的统一前缀
+// axios.defaults.baseURL = 'http://localhost:8090/api-dev/note-springboot';
+axios.defaults.baseURL = `${process.env.VUE_APP_API_URL}/note-springboot`;
+
 //允许前端发送凭证
 axios.defaults.withCredentials = true;
 
 //自定义全局变量使用 $开头 命名，其他页面可以通过 this.$axios 使用该变量
 Vue.prototype.$axios = axios
+
+
 
 // 添加请求拦截器，可省略每次发送ajax请求都携带token
 axios.interceptors.request.use(req => {

@@ -41,6 +41,7 @@ export default {
       console.log(row.did);
     },
     getAllDep() {
+      //api表示前端配置使用了代理，执行跨域操作
       this.$axios.post("/dep/1/5",
         {}
       ).then(resp => {
@@ -56,6 +57,7 @@ export default {
     }
   },
   mounted() {
+    console.log(process.env.NODE_ENV)
     this.getAllDep();
   }
 }
