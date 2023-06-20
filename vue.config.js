@@ -22,7 +22,7 @@ module.exports = {
 		*/
 
 		// proxy: 'http://localhost:8080',
-		proxy: 'http://47.98.143.15:8080',
+		proxy: 'http://47.98.143.157:8080',
 
 		/*
 		方式2：请求端口后输入api的使用跨域
