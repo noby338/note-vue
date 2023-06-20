@@ -5,7 +5,7 @@ const {
 module.exports = (req, res) => {
     let target = ''
     // 代理目标地址
-    if (req.url.startsWith('/api-pro')) {
+    if (req.url.startsWith('/api')) {
         target = 'http://47.98.143.157:8080'
     }
     // 创建代理对象并转发请求
@@ -14,7 +14,7 @@ module.exports = (req, res) => {
         changeOrigin: true,
         pathRewrite: {
             // 通过路径重写，去除请求路径中的 `/api`
-            '^/api-pro/': '/'
+            '^/api/': '/'
         }
     })(req, res)
 }
