@@ -39,12 +39,12 @@ module.exports = {
 				ws: true,//ws 选项表示是否支持 WebSocket。如果设置为 true，那么代理服务器会在后端服务器上打开 WebSocket 连接，从而支持 WebSocket 通信。
 				changeOrigin: true//changeOrigin 选项表示是否修改请求头中的 Origin 字段。如果设置为 true，代理服务器会将请求头中的 Origin 修改为后端服务器的地址，从而绕过浏览器的同源策略限制。这个选项在开发阶段通常需要设置为 true。
 			},
-			// '/api-pro': {
-			// 	target: 'http://47.98.143.157:8080',//后端服务器的地址和端口。对于以 /api-dev 开头的请求，将它们代理到 http://localhost:8080 这个地址上。
-			// 	pathRewrite: {'^/api-pro':''},//pathRewrite 选项指定了在转发请求时需要对请求路径进行重写，将路径中的 /api-dev 替换成空字符串。例如，如果前端发送的请求路径是 /api-dev/users，那么实际上会被代理转发到 http://localhost:8080/users。
-			// 	ws: true,//ws 选项表示是否支持 WebSocket。如果设置为 true，那么代理服务器会在后端服务器上打开 WebSocket 连接，从而支持 WebSocket 通信。
-			// 	changeOrigin: true//changeOrigin 选项表示是否修改请求头中的 Origin 字段。如果设置为 true，代理服务器会将请求头中的 Origin 修改为后端服务器的地址，从而绕过浏览器的同源策略限制。这个选项在开发阶段通常需要设置为 true。
-			// },
+			'/api-pro': {
+				target: 'http://47.98.143.157:8080',//后端服务器的地址和端口。对于以 /api-dev 开头的请求，将它们代理到 http://localhost:8080 这个地址上。
+				pathRewrite: {'^/api-pro':''},//pathRewrite 选项指定了在转发请求时需要对请求路径进行重写，将路径中的 /api-dev 替换成空字符串。例如，如果前端发送的请求路径是 /api-dev/users，那么实际上会被代理转发到 http://localhost:8080/users。
+				ws: true,//ws 选项表示是否支持 WebSocket。如果设置为 true，那么代理服务器会在后端服务器上打开 WebSocket 连接，从而支持 WebSocket 通信。
+				changeOrigin: true//changeOrigin 选项表示是否修改请求头中的 Origin 字段。如果设置为 true，代理服务器会将请求头中的 Origin 修改为后端服务器的地址，从而绕过浏览器的同源策略限制。这个选项在开发阶段通常需要设置为 true。
+			},
 		}
 		
 	},
