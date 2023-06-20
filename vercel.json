@@ -1,6 +1,6 @@
 {
-    "routes": [{
-        "src": "/api-pro/(.*)",
-        "dest": "http://47.98.143.157:8080/api-pro/$1"
+    "rewrites": [{
+        "source": "/api/(.*)",
+        "destination": "/api/proxy"
     }]
 }
