@@ -1,6 +1,6 @@
 {
     "routes": [{
         "src": "/api-pro/(.*)",
-        "dest": "https://http://47.98.143.157:8080/api-pro/$1"
+        "dest": "http://47.98.143.157:8080/api-pro/$1"
     }]
 }
