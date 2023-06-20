@@ -21,4 +21,9 @@
       * .env.test：用于测试环境，会在 npm run test 命令执行测试时被加载。
     * 这些环境变量可以在 Vue.js 应用程序的代码中使用 process.env 对象来获取。例如，如果在 .env.development 中设置了 VUE_APP_API_URL=http://localhost:8080/api，那么在 Vue.js 组件中可以通过 process.env.VUE_APP_API_URL 来获取这个地址。
     * 请注意，以 VUE_APP_ 开头的环境变量是 Vue.js 内置的变量名，用于指定应用程序的自定义环境变量。在其他变量名中使用 _APP_ 可能会导致冲突。
+  * dev环境可使用vue-cli进行跨域处理，而pro环境使用vercel的代理服务器进行跨域处理
+    * 使用vercel代理的步骤
+      * 安装npm i http-proxy-middleware依赖
+      * 在根目录下创建vercel.json文件
+      * /api/proxy.js中使用http-proxy-middleware进行跨域处理
   
