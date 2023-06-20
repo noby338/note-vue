@@ -7,6 +7,10 @@
     "test": "vue-cli-service build --mode test",  
     "build": "vue-cli-service build --mode production"
   },
+  "engines": {
+    "node": "16.19.0",
+    "npm": "9.2.0"
+  },
   "dependencies": {
     "axios": "^0.27.2",
     "core-js": "^3.6.5",
